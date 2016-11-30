@@ -10,14 +10,18 @@ struct Point {
 	double x,y;
 };
 
+struct Junction {
+	double x,y,r;
+} junctions[100];
+
 struct Road {
 	struct Point st,en;
 } roads[100];
 
-int n,camH;
+int n,m,camH;
 struct Point cam;
 
-void drawCircle(double cx,double cy,double r) {
+void drawFilledCircle(double cx,double cy,double r) {
 	int i;
 	struct Point pts[SLICE+1];
 
@@ -36,15 +40,34 @@ void drawCircle(double cx,double cy,double r) {
 	}	
 }
 
-void drawRoad(int id) {
+void drawCircle(double cx,double cy,double r) {
+	int i;
+	struct Point pts[SLICE+1];
+
+	for(i=0;i<=SLICE;i++) {
+		pts[i].x=r*cos(((double)i/(double)SLICE)*2*PI);
+		pts[i].y=r*sin(((double)i/(double)SLICE)*2*PI);
+	}
+
 	glColor3f(1.0, 1.0, 1.0);
+	for(i=0;i<SLICE;i++) {
+		glBegin(GL_LINES); {
+			glVertex3f(cx+pts[i].x,cy+pts[i].y,0);
+			glVertex3f(cx+pts[i+1].x,cy+pts[i+1].y,0);
+		} glEnd();
+	}	
+}
+
+void drawRoad(int id) {
+	if(id&1) glColor3f(1.0, 0.0, 0.0);
+	else glColor3f(0.0, 1.0, 0.0);
 	
 	glBegin(GL_LINES); {
 		glVertex3f(roads[id].st.x,roads[id].st.y,0);
 		glVertex3f(roads[id].en.x,roads[id].en.y,0);
 	} glEnd();
 
-	drawCircle(roads[id].en.x,roads[id].en.y,2);
+	//drawFilledCircle(roads[id].en.x,roads[id].en.y,1);
 }
 
 void keyboardListener(unsigned char key, int x,int y) {
@@ -116,9 +139,10 @@ void display() {
 	****************************/
 	//add objects
 
-	for(i=0;i<n;i++)
+	//for(i=0;i<n;i++)
+		//drawCircle(junctions[i].x,junctions[i].y,junctions[i].r);
+	for(i=0;i<m;i++)
 		drawRoad(i);
-
 	glutSwapBuffers();
 }
 
@@ -129,6 +153,7 @@ void animate() {
 
 void init() {
 	int i,x;
+
 	//codes for initialization
 	//clear the screen
 	glClearColor(0,0,0,0);
@@ -156,12 +181,15 @@ void init() {
 	freopen("glInput.txt","r",stdin);
 	scanf("%d",&n);
 	for(i=0;i<n;i++)
+		scanf("%lf %lf %lf",&junctions[i].x,&junctions[i].y,&junctions[i].r);
+	scanf("%d",&m);
+	for(i=0;i<m;i++)
 		scanf("%d %lf %lf %lf %lf",&x,&roads[i].st.x,&roads[i].st.y,&roads[i].en.x,&roads[i].en.y);
 }
 
 int main(int argc, char **argv) {
 	glutInit(&argc,argv);
-	glutInitWindowSize(500, 500);
+	glutInitWindowSize(1080, 960);
 	glutInitWindowPosition(0, 0);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGB);	//Depth, Double buffer, RGB color
 
