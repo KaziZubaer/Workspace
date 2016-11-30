@@ -1,0 +1,183 @@
+<?php
+
+class User {
+
+    private $connection;
+
+    public function _construct() {}
+    
+    private function connectDB() {
+        try {
+            $this->connection = oci_connect("bookshopadmin","admin", "localhost/XE");    
+        }
+        catch(Exception $e)  {
+            throw new Exception("Error in db connection: ", $e->getMessage());            
+        }        
+    }
+
+    private function disconnectDB() {
+        try {
+            oci_close($this->connection);
+        }
+        catch(Exception $e)  {
+            throw new Exception("Error in db disconnection: ", $e->getMessage());            
+        }        
+    }
+
+    public function ifUserExists($loginId) {
+    }
+
+    public function addUser($loginId, $password, $userName, $address, $phoneNo) {
+        $this->connectDB();
+        $conn = $this->connection;
+        $stmt = oci_parse($conn, 'INSERT INTO Users(userId,loginId,password,userName,address,phoneNo) VALUES(seq_user.nextval,:loginId,:password,:userName,:address,:phoneNo)');
+        oci_bind_by_name($stmt, ':loginId', $loginId);
+        oci_bind_by_name($stmt, ':password', $password);
+        oci_bind_by_name($stmt, ':userName', $userName);
+        oci_bind_by_name($stmt, ':address', $address);
+        oci_bind_by_name($stmt, ':phoneNo', $phoneNo);
+            
+        try {
+            oci_execute($stmt);
+            oci_free_statement($stmt);
+            $this->disconnectDB();
+            return true;
+        }
+
+        catch(Exception $e)  {
+            throw new Exception("Error in adduser", $e->getMessage());            
+        }
+    }
+
+        public function searchByTitle($title) {
+        $this->connectDB();
+        $conn = $this->connection;
+        $stmt = oci_parse($conn, 'SELECT * FROM Books where title=:title');
+        oci_bind_by_name($stmt, ':title', $title);
+        $rows = array();
+
+        try {
+            oci_execute($stmt);
+            while($row = oci_fetch_assoc($stmt)) {
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+
+        catch(Exception $e)  {
+            throw new Exception("Error in getUser", $e->getMessage());            
+        }   
+    }
+
+        public function searchByISBN($ISBN) {
+        $this->connectDB();
+        $conn = $this->connection;
+        $stmt = oci_parse($conn, 'SELECT * FROM Books where ISBN=:ISBN');
+        oci_bind_by_name($stmt, ':ISBN', $ISBN);
+        $rows = array();
+
+        try {
+            oci_execute($stmt);
+            while($row = oci_fetch_assoc($stmt)) {
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+
+        catch(Exception $e)  {
+            throw new Exception("Error in getUser", $e->getMessage());            
+        }   
+    }
+
+        public function search($title, $publisherName) {
+        $this->connectDB();
+        $conn = $this->connection;
+	$added = false;
+	$query = 'SELECT * FROM Books where ';
+	if($title != ''){
+		if(!$added){
+			$added = true;
+		}
+		else{
+			$query += ' AND';
+		}
+		$query += 'title LIKE \'%:title%\'';
+	}
+	if($title != ''){
+		if(!$added){
+			$added = true;
+		}
+		else{
+			$query += ' AND';
+		}
+		$query += 'title LIKE \'%:title%\'';
+	}
+       /** $stmt = oci_parse($conn, $query;**/
+   
+       $stmt=oci_parse($conn,'SELECT* FROM Books WHERE authorId=(
+       SELECT authorId FROM AUTHOR WHERE authorName=:authorName)');
+       
+        oci_bind_by_name($stmt, ':authorName', $authorName);
+        $rows = array();
+
+        try {
+            oci_execute($stmt);
+            while($row = oci_fetch_assoc($stmt)) {
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+
+        catch(Exception $e)  {
+            throw new Exception("Error in getUser", $e->getMessage());            
+        }   
+    }
+
+    public function searchByPublisher($publisherName) {
+        $this->connectDB();
+        $conn = $this->connection;
+   
+   
+       $stmt=oci_parse($conn,'SELECT* FROM Books WHERE publisherId=(
+       SELECT publisherId FROM Publishers WHERE publisherName=:publisherName)'
+       );
+       
+        oci_bind_by_name($stmt, ':publisherName', $publisherName);
+        $rows = array();
+
+        try {
+            oci_execute($stmt);
+            while($row = oci_fetch_assoc($stmt)) {
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+
+        catch(Exception $e)  {
+            throw new Exception("Error in getUser", $e->getMessage());            
+        }   
+    }
+
+    public function checkLogin($loginId, $password) {
+    }
+
+    public function getUser($userId) {
+        $this->connectDB();
+        $conn = $this->connection;
+        $stmt = oci_parse($conn, 'SELECT * FROM Users where userId=:userId');
+        oci_bind_by_name($stmt, ':userId', $userId);
+        $rows = array();
+
+        try {
+            oci_execute($stmt);
+            while($row = oci_fetch_assoc($stmt)) {
+                $rows[] = $row;
+            }
+            return $rows;
+        }
+
+        catch(Exception $e)  {
+            throw new Exception("Error in getUser", $e->getMessage());            
+        }   
+    }
+}

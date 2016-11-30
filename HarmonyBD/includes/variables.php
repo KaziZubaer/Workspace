@@ -1,0 +1,4 @@
+<?
+$BASE = "/HarmonyBD";
+$SONG_PER_SEGMENT = 5;
+$COMMENT_PER_SEGMENT = 10;

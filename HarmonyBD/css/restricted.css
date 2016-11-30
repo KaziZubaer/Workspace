@@ -1,0 +1,21 @@
+body {
+	min-height: 0;
+}
+
+#mainBody {
+	padding: 60px;
+	height: 480px;
+}
+
+.alias {
+	width: 60px;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: small;
+	padding: 5px 0;
+	color: #1BA657;
+}
+
+.alias:hover {
+	color: #324D36;
+}

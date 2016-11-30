@@ -1,0 +1,31 @@
+.body {
+	min-height: 0;
+}
+
+#mainBody {
+	min-height: 480px;
+	background-color: #1A0F0F;
+	padding: 80px;
+	color: #FFF;
+}
+
+input[type="radio"] {
+	margin: 10px;
+}
+
+a, a:visited, a:hover {
+	color: #FFF;
+}
+
+#confirm {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	height: 50px;
+	width: 150px;
+	margin-top: 40px;
+	background: #3DCF4F;
+	color: #000;
+	border: 0;
+	font-weight: bold;
+}
