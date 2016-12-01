@@ -1,0 +1,49 @@
+Manifest-Version: 1.0
+Built-By: 2.1.2
+Created-By: Android Gradle 2.1.2
+
+Name: res/layout/touch_train.xml
+SHA1-Digest: OpQenf7hEiGbcxjc9WdwORJDors=
+
+Name: AndroidManifest.xml
+SHA1-Digest: h2lrBL6hpFApy1B0GB6FmjDLxs8=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA1-Digest: Nq8q3HeTluE5JNCBpVvNy3BXtJI=
+
+Name: res/layout/activity_main.xml
+SHA1-Digest: lTGy63TQmgk4bx5GvOrTKvRr1Mo=
+
+Name: res/layout/touch_test.xml
+SHA1-Digest: M2PtzIkXAJmcg3g2Arkx+j65/vw=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA1-Digest: RRxOSvpmhVfCwiprVV/wZlaqQpw=
+
+Name: res/layout-v17/activity_main.xml
+SHA1-Digest: LmviAjTXIW+ubqD2IvnhgivdRBw=
+
+Name: res/menu/main.xml
+SHA1-Digest: 8bP2pDGA16PKTx+MDvhWW9nEcEc=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA1-Digest: AfPh3OJoypH966MludSW6f1RHg4=
+
+Name: res/menu-v11/main.xml
+SHA1-Digest: WyhviKySGNxGeCEykJ6vN0GgFf8=
+
+Name: res/layout/option.xml
+SHA1-Digest: 8smQxAeHXmq2XSFOhzLdUQdqwT0=
+
+Name: res/layout/touch_practice.xml
+SHA1-Digest: OpQenf7hEiGbcxjc9WdwORJDors=
+
+Name: resources.arsc
+SHA1-Digest: 7vRWe7/+YhX6ChYWEnJYW/EGJEc=
+
+Name: classes.dex
+SHA1-Digest: +kzgjOsNvVY19BSLPT+NHTNIo5Y=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA1-Digest: GVIfdEOBv4gEny2T1jDhGGsZOBo=
+
