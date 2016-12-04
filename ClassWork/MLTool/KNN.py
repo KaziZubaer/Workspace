@@ -1,9 +1,9 @@
 from pandas import DataFrame
 import numpy
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.neighbors import KNeighborsClassifier
 
-MAX_TEST_PER_TOPIC = 100
+MAX_TEST_PER_TOPIC = 30
 
 topics = []
 docCnt = 0
@@ -48,13 +48,13 @@ for tp in topics:
 		index.append(docCnt)
 		docCnt += 1
 
-data = DataFrame(rows, index=index)
+data = DataFrame(rows, index)
 data = data.reindex(numpy.random.permutation(data.index))
 
 countVectorizer = CountVectorizer()
 counts = countVectorizer.fit_transform(data['text'].values)
 
-classifier = MultinomialNB()
+classifier = KNeighborsClassifier(n_neighbors=3)
 targets = data['class'].values
 classifier.fit(counts, targets)
 
