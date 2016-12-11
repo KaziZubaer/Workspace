@@ -1,0 +1,7 @@
+0	Standing		5
+1	Sitting			10
+2	Walking			70
+3	Jogging			80
+4	"On\nVehicle"	90
+5	"Lying\nin Bed"	100
+

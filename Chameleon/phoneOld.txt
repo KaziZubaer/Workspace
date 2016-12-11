@@ -1,0 +1,260 @@
+Shabab Accepted as Shabab
+Present List: Hera,Shabab
+Mimic: 0
+
+Shabab Accepted as Shabab
+Present List: Hera,Shabab
+Mimic: 0
+
+Shabab Accepted as Shabab
+Present List: Hera,Shabab
+Mimic: 0
+
+Shabab Reject
+Present List: Hera,Shabab
+Mimic: 0
+
+Shabab Accepted as Shabab
+Present List: Hera,Shabab
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Shabab Accepted as Hera
+Present List: Hera
+Mimic: 1
+
+Shabab Accepted as Hera
+Present List: Hera
+Mimic: 1
+
+Shabab Accepted as Hera
+Present List: Hera
+Mimic: 1
+
+Shabab Accepted as Hera
+Present List: Hera
+Mimic: 1
+
+Shabab Accepted as Hera
+Present List: Hera
+Mimic: 1
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Hera Reject
+Present List: Hera
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Hera Accepted as Hera
+Present List: Hera
+Mimic: 0
+
+Farabi Accepted as Farabi
+Present List: Farabi
+Mimic: 0
+
+Farabi Accepted as Farabi
+Present List: Farabi
+Mimic: 0
+
+Farabi Accepted as Farabi
+Present List: Farabi
+Mimic: 0
+
+Farabi Accepted as Farabi
+Present List: Farabi
+Mimic: 0
+
+Farabi Accepted as Farabi
+Present List: Farabi
+Mimic: 0
+
+Mazhar Accepted as Mazhar
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Mazhar Accepted as Mazhar
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Mazhar Accepted as Mazhar
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Mazhar Accepted as Mazhar
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Mazhar Accepted as Mazhar
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Farabi Accepted as Farabi
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Farabi Reject
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Farabi Accepted as Farabi
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Farabi Accepted as Mazhar
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Farabi Accepted as Mazhar
+Present List: Farabi,Mazhar
+Mimic: 0
+
+Amlan Accepted as Amlan
+Present List: Amlan
+Mimic: 0
+
+Amlan Accepted as Amlan
+Present List: Amlan
+Mimic: 0
+
+Amlan Accepted as Amlan
+Present List: Amlan
+Mimic: 0
+
+Amlan Accepted as Amlan
+Present List: Amlan
+Mimic: 0
+
+Amlan Accepted as Amlan
+Present List: Amlan
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Nila Accepted as Nila
+Present List: Razu,Nila
+Mimic: 0
+
+Nila Accepted as Nila
+Present List: Razu,Nila
+Mimic: 0
+
+Nila Accepted as Nila
+Present List: Razu,Nila
+Mimic: 0
+
+Nila Accepted as Nila
+Present List: Razu,Nila
+Mimic: 0
+
+Nila Accepted as Nila
+Present List: Razu,Nila
+Mimic: 0
+
+Razu Accepted as Nila
+Present List: Nila
+Mimic: 1
+
+Razu Accepted as Nila
+Present List: Nila
+Mimic: 1
+
+Razu Reject
+Present List: Nila
+Mimic: 1
+
+Razu Reject
+Present List: Nila
+Mimic: 1
+
+Razu Accepted as Nila
+Present List: Nila
+Mimic: 1
+
+Razu Reject
+Present List: Nila
+Mimic: 1
+
+Razu Accepted as Nila
+Present List: Nila
+Mimic: 1
+
+Razu Accepted as Nila
+Present List: Nila
+Mimic: 1
+
+Razu Reject
+Present List: Nila
+Mimic: 1
+
+Razu Accepted as Nila
+Present List: Nila
+Mimic: 1
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
+Razu Accepted as Razu
+Present List: Razu
+Mimic: 0
+
