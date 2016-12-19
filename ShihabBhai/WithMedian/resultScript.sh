@@ -1,26 +1,2 @@
-./clusterify 0 0 0 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.04 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.08 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.12 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.16 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.20 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.24 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.28 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.32 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.36 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.40 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.44 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.48 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.52 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.56 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.60 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.64 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.68 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.72 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.76 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.80 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.84 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.88 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.92 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 0.96 0 0 result_varying_medTol_0.00_0.00_0.txt
-./clusterify 0.00 0.00 1.00 0 0 result_varying_medTol_0.00_0.00_0.txt
+./clusterify 0.05 0 0 0 5 0 1 2 3 4 result_varying_sdTol_5.00_0.00_0.txt
+

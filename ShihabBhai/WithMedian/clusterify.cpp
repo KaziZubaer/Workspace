@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include <cmath>
+#include <algorithm>
 #define eps 0.000001
 using namespace std;
 
@@ -52,14 +53,12 @@ int main(int argc, char *argv[]) {
     vector <Point> points,mids;
     avgTolerancePCT=atof(argv[1]);
     sdTolerancePCT=atof(argv[2]);
-    medTolerance=atoi(argv[3]);
+    medTolerancePCT=atof(argv[3]);
     missTolerance=atoi(argv[4]);
+    cout<<avgTolerancePCT<<" "<<sdTolerancePCT<<" "<<medTolerancePCT<<" "<<missTolerance<<endl;
     for(i=0;i<5;i++) param[i]=false;
-    /***********Read the new responses from the sh file**************/
     cnt=atoi(argv[5]);
     for(i=0;i<cnt;i++) param[atoi(argv[6+i])]=true;
-    /****************************************************************/
-
     rout.open(argv[6+i],fstream::in | fstream::out | fstream::app);
     din>>n>>d>>k;
     N=n/k;
@@ -102,7 +101,7 @@ int main(int argc, char *argv[]) {
             else {
                 medTolerance=(arrMed[arrMed.size()/2-1]+arrMed[arrMed.size()/2])/2;
             }
-            medTolerance=abs(medTolerance);
+            medTolerance=abs(medTolerance)*medTolerancePCT;
             temp.tolerance.push_back(avgTolerance+sdTolerance+medTolerance);
         }
         mids.push_back(temp);
@@ -144,13 +143,21 @@ int main(int argc, char *argv[]) {
                     for(j=0;j<n;j++) {
                         if(points[j].assigned==i) {
                             x+=(points[j].coord[m]-mids[i].coord[m])*(points[j].coord[m]-mids[i].coord[m]);
-                            arrMed.push_back()
+                            arrMed.push_back(points[j].coord[m]);
                         }
                     }
                     x/=cnt;
                     x=sqrt(x);
                     sdTolerance=x*sdTolerancePCT;
-                    mids[i].tolerance[m]=avgTolerance+sdTolerance;
+                    sort(arrMed.begin(),arrMed.end());
+                    if(arrMed.size()%2==0) {
+                        medTolerance=arrMed[arrMed.size()/2];
+                    }
+                    else {
+                        medTolerance=(arrMed[arrMed.size()/2-1]+arrMed[arrMed.size()/2])/2;
+                    }
+                    medTolerance=abs(medTolerance)*medTolerancePCT;
+                    mids[i].tolerance[m]=avgTolerance+sdTolerance+medTolerance;
                     diff=mids[i].coord[m]-temp.coord[m];
                     diff=diff<0?diff*(-1):diff;
                     maxDif=max(maxDif,diff);
