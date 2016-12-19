@@ -44,8 +44,6 @@ class Channel :
 		for i in range(0, 1<<self.k) :
 			if cnt[i]>0 :
 				self.avg[i] /= cnt[i]
-			else :
-				print (i)
 
 	def test(self, given) :
 		state = 0
